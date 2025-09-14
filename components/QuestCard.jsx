@@ -87,7 +87,7 @@ const QuestCard = ({
       {/* Button */}
       <button
         disabled={locked}
-        className={`w-full py-2 rounded-xl font-semibold transition ${
+        className={`w-full py-2 rounded-xl font-semibold cursor-pointer transition ${
           locked
             ? "bg-gray-400 text-gray-200 cursor-not-allowed"
             : buttonClass

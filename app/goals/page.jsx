@@ -104,9 +104,9 @@ const GoalsPage = () => {
           <h2 className="text-lg font-bold text-gray-800">Active Goals</h2>
           <button
             onClick={() => setShowNewModal(true)}
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow-md"
+            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow-md cursor-pointer"
           >
-            <PlusCircle className="w-5 h-5" /> New Goal
+            <PlusCircle className="w-5 h-5 " /> New Goal
           </button>
         </div>
 
@@ -142,7 +142,7 @@ const GoalsPage = () => {
               <div className="flex flex-col sm:items-end gap-3">
                 <button
                   onClick={() => openAddMoney(goal.id)}
-                  className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow-sm"
+                  className="flex items-center gap-2 cursor-pointer bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow-sm"
                 >
                   <Coins className="w-4 h-4" /> Add Money
                 </button>
