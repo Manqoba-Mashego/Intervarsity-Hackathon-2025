@@ -9,7 +9,8 @@ Null Pointers
 | Name     | Role                | Institution           | Discord Handle | Email |
 |----------|---------------------|-----------------------| -------------------|-------------|
 | **Manqoba Mashego**   | Frontend Developer   | University of Pretoria | masterpiece_kessaku | <manqoba.mashego@imaginescholar.org> |
-| **William Ndhlovu**   | Designer, Frontend Developer  | University of Pretoria | william6252. | <w.ndhlovu0@gmail.com> |
+
+> Was initially supposed to work with William Ndhlovu. He is the one who came up with the name "SaveQuest", but he was not collaborating and I ended up doing the entire project by myself.
 
 
 ## 🏫 Institution

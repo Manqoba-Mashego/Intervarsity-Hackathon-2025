@@ -68,19 +68,16 @@ const GoalsPage = () => {
     setAddAmount("");
   };
 
-  // Split goals
   const activeGoals = goals.filter((g) => g.saved < g.target);
   const completedGoals = goals.filter((g) => g.saved >= g.target);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <div className="relative bg-green-500 w-full h-[160px] px-6 text-white flex flex-col justify-center">
         <h1 className="text-2xl font-bold">Your Goals</h1>
         <p className="text-sm opacity-90">Track your saving quests</p>
       </div>
 
-      {/* Summary Card */}
       <div className="relative -top-12 max-w-7xl mx-auto px-4">
         <div className="bg-white shadow-xl rounded-2xl p-6 flex justify-around text-center">
           <div>
@@ -97,8 +94,6 @@ const GoalsPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Active Goals */}
       <div className="max-w-5xl mx-auto px-4 mt-8 flex flex-col gap-6 pb-12">
         <div className="flex justify-between items-center">
           <h2 className="text-lg font-bold text-gray-800">Active Goals</h2>
@@ -154,8 +149,6 @@ const GoalsPage = () => {
           );
         })}
       </div>
-
-      {/* Completed Goals */}
       {completedGoals.length > 0 && (
         <div className="max-w-5xl mx-auto px-4 mt-4 flex flex-col gap-6 pb-28">
           <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
@@ -184,8 +177,6 @@ const GoalsPage = () => {
           ))}
         </div>
       )}
-
-      {/* Modals */}
       {showNewModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="absolute inset-0 bg-black opacity-25" />
@@ -249,8 +240,6 @@ const GoalsPage = () => {
           </div>
         </div>
       )}
-
-      {/* Bottom Nav */}
       <div className="fixed bottom-0 left-0 right-0 bg-white shadow-inner py-2 px-4 flex justify-around text-gray-600">
         <button className="flex flex-col items-center text-green-600">
           <span>🏠</span>

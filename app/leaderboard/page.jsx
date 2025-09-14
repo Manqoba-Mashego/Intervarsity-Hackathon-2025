@@ -6,7 +6,6 @@ import { Users, Trophy } from "lucide-react";
 const LeaderboardPage = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // Example leaderboard data (replace with real backend data later)
   const leaderboard = [
     { id: 1, name: "Alex M.", score: 480, title: "Top saver" },
     { id: 2, name: "You", score: 320, title: "Rising star" },
@@ -24,7 +23,6 @@ const LeaderboardPage = () => {
 
   return (
     <div className="min-h-screen">
-      {/* HERO */}
       <header className="relative bg-gradient-to-r from-purple-600 to-purple-800 text-white h-[160px] ">
         <div className="h-[200px] max-w-5xl mx-auto px-6 flex items-center justify-between">
           <div>
@@ -39,7 +37,6 @@ const LeaderboardPage = () => {
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
       <main className="max-w-5xl mx-auto px-4 mt-10 pb-32">
         <section className="bg-white rounded-3xl shadow-lg p-6 md:p-10">
           <div className="flex items-center justify-between mb-6">
@@ -49,7 +46,6 @@ const LeaderboardPage = () => {
           </div>
 
           <>
-            {/* Podium for top 3 */}
             <div className="grid grid-cols-3 gap-4 text-center mb-8">
               {leaderboard.slice(0, 3).map((player, i) => (
                 <div
@@ -88,7 +84,6 @@ const LeaderboardPage = () => {
               ))}
             </div>
 
-            {/* Leaderboard list */}
             <ol className="space-y-3">
               {displayedPlayers.map((player, i) => (
                 <li

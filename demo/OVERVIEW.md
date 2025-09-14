@@ -30,6 +30,7 @@ We took inspiration from **Duolingo**, using playful gamification and addictive 
 
 
 ## 📌 Future Improvements
-``` c
-// TODO: Mention ideas or features you’d add if given more time.
-```
+- Create a backend for user authentication
+- Personalize the app for each user, and not use dummy data
+- Add a system where users can add friends to compete with
+- Have actual financial literacy contect, could be videos or text, on the "quests" part

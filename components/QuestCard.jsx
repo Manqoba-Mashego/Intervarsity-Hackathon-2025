@@ -37,7 +37,6 @@ const QuestCard = ({
           : "bg-white shadow-md hover:shadow-lg"
       }`}
     >
-      {/* Title + Status */}
       <div className="flex items-start justify-between">
         <div>
           <h2
@@ -55,7 +54,6 @@ const QuestCard = ({
         {locked && <Lock className="text-gray-500 w-6 h-6 shrink-0" />}
       </div>
 
-      {/* Quest Info */}
       <div className="flex flex-wrap items-center gap-4 text-sm">
         <span
           className={`px-2 py-1 rounded-full font-medium ${

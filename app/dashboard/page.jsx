@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Ribbon, Flame, Award, Coins, Zap, Target, User } from "lucide-react";
 
 const DashboardPage = () => {
-  // Example data
   const weeklyGoal = 500;
   const savedThisWeek = 350;
   const totalSaved = 1240;
@@ -33,7 +32,6 @@ const DashboardPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-24">
-      {/* Top banner */}
       <div className="relative bg-gradient-to-r from-green-500 to-green-600 w-full h-[160px]  px-6 text-white flex flex-col justify-center">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -52,8 +50,6 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Weekly goal card */}
       <div className="relative -top-10 max-w-4xl mx-auto px-4">
         <div className="bg-white rounded-2xl shadow-xl p-6">
           <div className="flex justify-between items-center">
@@ -88,8 +84,6 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Stats */}
       <div className="px-6 mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-5 flex flex-col items-center">
           <Coins className="w-6 h-6 text-yellow-500" />
@@ -107,8 +101,6 @@ const DashboardPage = () => {
           <p className="text-xs text-gray-500">Badges</p>
         </div>
       </div>
-
-      {/* Recent Badges */}
       <div className="p-6 mt-6 max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-3">
           <h2 className="text-lg font-bold text-gray-800">Recent Badges</h2>
@@ -116,7 +108,6 @@ const DashboardPage = () => {
             View All
           </Link>
         </div>
-
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {recentBadges.map((badge, i) => (
             <div
@@ -135,8 +126,6 @@ const DashboardPage = () => {
           ))}
         </div>
       </div>
-
-      {/* Bottom nav */}
       <div className="fixed bottom-0 left-0 right-0 bg-white shadow-inner py-2 px-4 flex justify-around text-gray-600">
         <button className="flex flex-col items-center text-green-600">
           <span>🏠</span>
