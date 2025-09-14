@@ -7,10 +7,10 @@ const navItems = [
   { name: "Home", href: "/dashboard", icon: Home },
   { name: "Goals", href: "/goals", icon: Target },
   { name: "Badges", href: "/badges", icon: Award },
-  { name: "Challenges", href: "/challenges", icon: Users },
+  { name: "Leaderboard", href: "/leaderboard", icon: Users },
   { name: "Quests", href: "/quests", icon: Scroll },
 ];
-
+  
 const Navigation = () => {
   const pathname = usePathname();
 

@@ -1,8 +1,9 @@
 import QuestCard from '@/components/QuestCard'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   const quests = [
+    // Beginner
     {
       title: "What is Compound Interest?",
       description: "Learn how your money can grow over time",
@@ -177,14 +178,22 @@ const page = () => {
       locked: true,
       unlocksAtXp: 750,
     },
-  ];
+  ]
 
-  const currentXp = 125;
-  const nextLevelXp = 400;
-  const progressPercent = (currentXp / nextLevelXp) * 100;
+  const currentXp = 125
+  const nextLevelXp = 400
+  const progressPercent = (currentXp / nextLevelXp) * 100
+
+  // Group quests by level
+  const levels = ["Beginner", "Intermediate", "Advanced"]
+  const groupedQuests = levels.map(level => ({
+    level,
+    quests: quests.filter(q => q.level === level),
+  }))
 
   return (
     <div>
+      {/* Hero & Progress */}
       <div className="relative bg-yellow-500 w-full h-[160px] px-10 text-white flex flex-col gap-3 pt-12">
         <h1 className="text-2xl font-bold">Side Quests</h1>
         <p>Level up your financial knowledge</p>
@@ -234,13 +243,21 @@ const page = () => {
         </div>
       </div>
 
-      <div className="p-4 grid gap-6 max-w-4xl mx-auto mt-40 mb-25">
-        {quests.map((quest, index) => (
-          <QuestCard key={index} {...quest} />
+      {/* Grouped Quests */}
+      <div className="p-4 max-w-4xl mx-auto mt-40 mb-25 space-y-12">
+        {groupedQuests.map(group => (
+          <div key={group.level}>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">{group.level}</h2>
+            <div className="grid gap-6">
+              {group.quests.map((quest, index) => (
+                <QuestCard key={index} {...quest} />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default Page
