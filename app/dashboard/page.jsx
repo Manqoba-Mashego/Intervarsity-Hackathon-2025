@@ -35,7 +35,14 @@ const DashboardPage = () => {
     <div className="min-h-screen bg-gray-50 mb-10 pb-30">
       {/* Top Green Navbar */}
       <div className="relative bg-green-500 w-full h-[160px] px-6 text-white flex flex-col justify-center">
-        <h1 className="text-2xl font-bold">Welcome back, Saver!</h1>
+        <h1 className="text-2xl font-bold md:mb-0 mb-1 -mt-2 md:mt-0">
+          <span className="md:inline block">
+            Welcome back,
+          </span>{" "}
+          <span className="md:inline block">
+            Saver!
+          </span>
+        </h1>
         <div className="mt-2 inline-flex items-center gap-2 bg-purple-600 px-3 py-1 rounded-full shadow-md w-fit">
           <Award className="w-4 h-4 text-white" />
           <span className="text-sm font-semibold">Silver Strategist</span>
@@ -66,13 +73,13 @@ const DashboardPage = () => {
           </div>
 
           <div className="mt-2 flex justify-between">
-  <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-xl font-semibold shadow-md cursor-pointer">
-    + Add Savings
-  </button>
-  <button className="bg-white hover:bg-gray-100 text-green-600 border border-green-600 py-2 px-4 rounded-xl font-semibold shadow-md cursor-pointer">
-    View all goals
-  </button>
-</div>
+            <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-xl font-semibold shadow-md cursor-pointer">
+              + Add Savings
+            </button>
+            <button className="bg-white hover:bg-gray-100 text-green-600 border border-green-600 py-2 px-4 rounded-xl font-semibold shadow-md cursor-pointer">
+              View all goals
+            </button>
+          </div>
         </div>
       </div>
 
@@ -115,7 +122,9 @@ const DashboardPage = () => {
               >
                 {badge.icon}
               </div>
-              <p className="text-sm font-semibold">{badge.name}</p>
+              <p className="text-sm font-semibold text-center md:text-left">
+                {badge.name}
+              </p>
             </div>
           ))}
         </div>
